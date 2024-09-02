@@ -1,1 +1,1 @@
-esto es una prueba, revise la terminal para los comandos 
+.-esto es una prueba, revise la terminal para los comandos 
