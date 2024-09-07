@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Sencilla</title>
+    
+    <!-- Estilos para el head -->
+    <style>
+
+            /* Para Cambiar el body, osea todo el fondo */
+            body {
+            background-color: #c9c4c4; /* No se que tan claro quiera el gris */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Esto cambiara la fuente de todos los párrafos, osea de los p */
+        p {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Pseudo-clases estructurales */
+        section p:first-child {
+            margin-top: 20px;
+        }
+        section p:last-child {
+            background-color: #f0f0f0; /* esta medio mas comodo que pida el codigo del color ya que gris claro queda ligeramente ambiguo pero x, cosa mia */
+        }
+
+        /* Selectores combinados */
+        .section h2 {
+            color: #0055cc;
+        }
+        /* Selector de hijo directo */
+        header > nav {
+            background-color: #eaeaea;
+        }
+        /* Selector de hermano adyacente y general */
+        h2 + p {
+            color: #666;
+        }
+        h2 ~ p {
+            font-style: italic; /* fue la primera que sale */
+        }
+
+
+    </style>
+    
+    <!-- Vinculación del archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- nose si ir mencionando cada seccion que pidio, esta es la primera, cambiar el h1 del header por azul, nose si mencionar cada paso o nomas documentar para saber que hace cada cosa, supongo que hare lo segundo porque se llenara de mucho texto -->
+    <header>
+        <h1 style="color: blue;">Bienvenidos a Mi Página Web</h1>
+        <!-- Menú de navegación principal -->
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Sección de bienvenida, dejare los textos a como estaban originalmente -->
+        <section id="home" class="section">
+            <h2>Inicio</h2>
+            <p class="highlight">Esta es una página web sencilla diseñada para demostrar el uso de HTML semántico. Aquí puedes aprender sobre los diferentes elementos que hacen que tu código sea más estructurado y accesible.</p>
+            <img src="https://i.pinimg.com/originals/d6/1d/47/d61d47176b57f7ab3dbb6b63598fd5ce.gif" alt="Sample image">
+        </section>
+
+        <!-- Sección Acerca de -->
+        <section id="about" class="section">
+            <h2>Acerca de</h2>
+            <article id="important-info">
+                <h3>Nuestra Historia</h3>
+                <p>Somos una pequeña empresa dedicada a ofrecer los mejores servicios de tecnología y diseño web. Nuestro objetivo es ayudarte a alcanzar tus metas en el mundo digital.</p>
+            </article>
+            <article>
+                <h3>Nuestro Equipo</h3>
+                <p>Contamos con un equipo de expertos en desarrollo web, marketing digital, y diseño gráfico, listos para llevar tu negocio al siguiente nivel.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LYCYoSiqgqA?si=k2V8J_dfs19denD7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </article>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="services" class="section">
+            <h2>Servicios</h2>
+            <article>
+                <h3>Desarrollo Web</h3>
+                <p>Creación de sitios web personalizados y optimizados para diferentes dispositivos.</p>
+            </article>
+            <article>
+                <h3>Marketing Digital</h3>
+                <p>Estrategias efectivas de marketing para aumentar la visibilidad de tu marca en línea.</p>
+            </article>
+        </section>
+
+        <!-- Contenido complementario o secundario -->
+        <aside>
+            <h3>Noticias Recientes</h3>
+            <ul>
+                <li><a href="#">Lanzamiento de nuestro nuevo producto</a></li>
+                <li><a href="#">Consejos para mejorar tu SEO</a></li>
+                <li><a href="#">Tendencias de diseño web 2024</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+        <p>Contacto: info@miempresa.com | Teléfono: +123 456 7890</p>
+    </footer>
+</body>
+</html>

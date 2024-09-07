@@ -1,0 +1,64 @@
+/* Estilo para los encabezados h2 y h3, la "," funciona para hacer mencion de varios, como en java ps (creo) */
+h2, h3 {
+    font-size: 18px;
+}
+
+/* Lo mismo que arriba pero para el main, ya te la sabes por si se te olvida */
+main {
+    color: #333;
+}
+
+/* Clase para resaltar parrafos en rojo */
+.highlight {
+    color: red;
+}
+
+/* ID important-indo de color amarillo */
+#important-info {
+    background-color: #f0f083; /* se supone que es amarillo claro pero nose que tan claro lo quiera */
+}
+
+/* Pseudo-clases dinamicas */
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: orange;
+}
+
+input:focus {
+     border: 2px solid blue;
+}
+
+/* Cascada y especificidad, al chile nose si se deba poner aqui pero voy en orden asi que aqui lo pondre todo */
+p {
+    color: green;
+}
+
+p.highlight {
+    color: red;
+}
+
+aside p {
+    color: blue !important;
+}
+
+/* Estilos para el contenedor */
+.container {
+    width: 400px;
+    height: 200px;
+    border: 2px solid #000;
+}
+
+/* Estilo para las imagenes */
+img {
+    width: 300px;
+    border: 3px solid #333;
+}
+
+/* Estilo para el video */
+video {
+    width: 500px;
+    height: 280px;
+}
