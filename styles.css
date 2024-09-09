@@ -1,0 +1,65 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tarjeta img {
+    display: block;
+    margin: 10px auto;
+}
+
+.tarjeta h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.tarjeta p {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tarjeta button {
+    background-color: #006400; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta button:hover {
+    background-color: #004d32;
+}
+
+.tarjeta:hover {
+    background-color: #e0f7fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); /* esto de aqui aumentara el tamaño un 5% al hacer el hover */
+}
+
+.tarjeta:hover h2 {
+    color: #000;
+}
+
+.tarjeta:hover button {
+    background-color: #004d32;
+}
