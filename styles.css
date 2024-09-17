@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f9fc;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    height: 80vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.left-panel, .right-panel {
+    padding: 40px;
+    width: 50%;
+}
+
+.left-panel {
+    background-color: #f2f4f8;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.visuals {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.current-balance {
+    margin-left: 20px;
+}
+
+.current-balance, .new-transaction {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px;
+}
+
+.current-balance p {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.current-balance h2 {
+    color: #24a0ed;
+    font-size: 24px;
+}
+
+.stonks img {
+    width: 150px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.new-transaction button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.new-transaction p {
+    color: #666;
+    font-size: 12px;
+}
+
+.welcome-text {
+    margin-top: 40px;
+}
+
+.welcome-text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    color: #666;
+    font-size: 14px;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 60px;
+}
+
+.right-panel h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.right-panel p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.right-panel form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+.input-group label {
+    margin-right: 10px;
+}
+
+.input-group img {
+    width: 20px;
+    height: 20px;
+}
+
+.input-group input {
+    border: none;
+    flex-grow: 1;
+    padding: 10px;
+    outline: none;
+    background: transparent;
+}
+
+.forgot-password {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: block;
+    align-self: flex-end;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.social-login p {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+    margin: 20px 0;
+    width: 100%; 
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ddd;
+    margin: 0 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; 
+}
+
+.google,
+.facebook {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+footer {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-top: 20px;
+}
