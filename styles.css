@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f9f9f9;
+    color: #2b2b2b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2b2b2b;
+}
+
+.auth-buttons b {
+    margin-left: 1000px;
+}
+.auth-buttons a {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #173f35;
+    border-radius: 25px;
+    color: #173f35;
+    font-weight: 500;
+}
+
+.auth-buttons a.signup {
+    background-color: #173f35;
+    color: white;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 40px;
+    background-color: white;
+}
+
+.hero-left {
+    max-width: 50%;
+}
+
+.pre-title {
+    color: #78a390;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.hero-left h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin: 20px 0;
+}
+
+.hero-right {
+    margin: 0px 200px;
+}
+
+.hero-left span {
+    color: #173f35;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #173f35;
+    color: white;
+    font-weight: 500;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.rating {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.rating span {
+    color: #f5c518;
+}
+
+.hero-right img {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.users-images img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.partners img {
+    width: 100px;
+    opacity: 0.8;
+}
+
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
