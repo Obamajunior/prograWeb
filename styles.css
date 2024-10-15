@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 80px 1fr 300px;
+    grid-gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.sidebar {
+    background-color: #F9F2EC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 25px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea los íconos al centro */
+    padding-top: 20px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ancho del contenedor del ícono */
+    height: 50px; /* Altura del contenedor del ícono */
+    background-color: #F5F5F5; /* Fondo de cada ícono */
+    border-radius: 50%; /* Hace los íconos circulares */
+    transition: background-color 0.3s ease;
+    margin: 10px 0; /* Espaciado general entre los íconos */
+}
+
+.sidebar-menu a:nth-child(1) {
+    margin-bottom: 40px; /* Aumenta el espacio después de los primeros dos íconos */
+}
+
+
+.sidebar-menu a:nth-last-child(2) {
+    margin-top: 40px; /* Aumenta el espacio antes de los dos últimos íconos */
+}
+
+.sidebar-menu a img {
+    width: 24px; /* Ajusta el tamaño del ícono */
+    height: 24px;
+}
+
+.sidebar-menu a:hover {
+    background-color: #5441D8; /* Cambia el fondo cuando pasas el cursor */
+    cursor: pointer;
+}
+
+.sidebar {
+    background-color: #F9F2EC;
+    padding: 20px;
+    border-radius: 25px;
+    height: 100vh; /* Hace que la barra lateral abarque toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: auto; /* Empuja el avatar hacia el final de la barra lateral */
+    margin-bottom: 20px; /* Espaciado en la parte inferior */
+}
+
+
+.main-content {
+    padding: 20px;
+}
+
+.main-header h1 {
+    font-size: 48px; /* Tamaño del título */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Usa la fuente importada */
+    color: #333;
+    line-height: 1.2; /* Espacio entre las líneas */
+
+}
+
+
+/* General style for buttons */
+.categories button {
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 7px;
+    background: #F9F2EC; /* Degradado de fondo */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 50px; /* Hace que los bordes sean completamente redondeados */
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px; /* Espaciado entre botones */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #333; /* Color del texto */
+}
+
+/* Estilo para la imagen dentro del botón */
+.categories .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Imagen circular */
+    background-color: #fff; /* Color de fondo del círculo */
+    padding: 4px;
+    margin-right: 10px;
+    object-fit: cover; /* Ajusta la imagen dentro del círculo */
+}
+
+/* Hover effect for buttons */
+.categories button:hover {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff); /* Cambio suave de fondo al hacer hover */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Más sombra al hacer hover */
+}
+
+.categories button:hover .icon {
+    background-color: lightblue; /* Cambio del color del icono al hacer hover */
+}
+
+
+.popular-courses h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.popular-courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas de igual tamaño */
+    grid-gap: 20px; /* Espacio entre los elementos */
+}
+
+.course-card {
+    position: relative; /* Necesario para que los elementos absolutos se posicionen correctamente dentro de la tarjeta */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F6FF;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Para que las imágenes no se salgan de la tarjeta */
+}
+
+.course-card:hover {
+    transform: scale(1.05); /* Efecto hover */
+}
+
+.course-card img.corner-img {
+    position: absolute;
+    width: 35px; /* Ancho de la imagen */
+    height: 35px; /* Alto de la imagen */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+}
+
+.course-card img.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.course-card img.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+.course-info {
+    margin-left: 25px; /* Agrega espacio a la izquierda para que el texto no se sobreponga con la imagen */
+}
+
+.course-info p {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
+
+.course-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-info span {
+    font-size: 12px;
+    color: #888;
+}
+
+.profile-sidebar {
+    background-color: #F9F2EC;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.profile {
+    position: relative; /* Necesario para posicionar las imágenes de las esquinas */
+    padding: 20px;
+    background-color: #F9F2EC;
+    width: 270px; /* Define el ancho del contenedor del perfil */
+    text-align: center;
+
+}
+
+.profile-avatar {
+    width: 80px; /* Ajusta el tamaño de la imagen de perfil */
+    height: 80px;
+    border-radius: 50%; /* Hace que sea redonda */
+    margin-bottom: 20px;
+    object-fit: cover; /* Se asegura que la imagen cubra todo el círculo */
+}
+
+
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-friends {
+    font-size: 14px;
+    color: #888;
+}
+
+.image-left {
+    position: absolute;
+    top: 10px; /* Posiciona en la parte superior */
+    left: 10px; /* Posiciona en la parte izquierda */
+    width: 30px;
+    height: 30px;
+}
+
+.image-right {
+    position: absolute;
+    top: 10px; /* Posiciona en la parte superior */
+    right: 10px; /* Posiciona en la parte derecha */
+    width: 30px;
+    height: 30px;
+}
+
+.activity h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.activity-stats img {
+    width: 100%;
+    border-radius: 15px; /* Hacer bordes redondeados */
+    margin-bottom: 20px;
+}
+
+.activity-stats p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.activity-stats .result {
+    color: #5441D8;
+    font-weight: bold;
+}
+
+
+.my-courses {
+    padding: 20px;
+    position: relative;
+    height: auto;
+    width: 290px;
+}
+
+.my-courses h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.course-card {
+    position: relative; /* Necesario para posicionar elementos como el rating y la imagen */
+    display: flex;
+    align-items: center;
+    background-color: #FCE4EC; /* Fondo de la parte derecha */
+    padding: 20px;
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
+    border-radius: 20px; /* Bordes suaves */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Para evitar que el pseudo-elemento desborde */
+    z-index: 1; /* Asegura que el contenido principal esté sobre el pseudo-elemento */
+}
+
+.course-card2 {
+    height: 220px;
+    width: 250px;
+    position: relative; /* Necesario para posicionar elementos como el rating y la imagen */
+    display: flex;
+    align-items: center;
+    background-color: #FCE4EC; /* Fondo de la parte derecha */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 20px; /* Bordes suaves */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Para evitar que el pseudo-elemento desborde */
+    z-index: 1; /* Asegura que el contenido principal esté sobre el pseudo-elemento */
+}
+
+.course-card2::before {
+    content: ''; /* Se crea un contenido vacío para el pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Define que ocupe la mitad del ancho */
+    height: 100%;
+    background-color: #e05656; /* Color rojo para la mitad izquierda */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+
+
+.course-info {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.course-info p {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 8px;
+}
+
+.course-info p img {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; /* Hace que el ícono sea circular */
+    background-color: #e0e0e0; /* Fondo para el círculo */
+    padding: 8px; /* Añade un poco de espacio interno */
+}
+
+.course-info h3 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.course-info span {
+    font-size: 14px;
+    color: black;
+}
+
+.course-rating {
+    position: absolute;
+    top: 10px; /* Posiciona en la parte superior */
+    right: 10px; /* Posiciona en la parte derecha */
+    font-size: 13px;
+    font-weight: bold;
+    color: #5441D8; /* Color de la calificación */
+    background-color: white; /* Fondo suave para la calificación */
+    padding: 5px 15px;
+    border-radius: 1000px; /* Bordes redondeados */
+}
+
+.course-rating2 {
+    position: absolute;
+    top: 5px; /* Posiciona en la parte superior */
+    right: 80px; /* Posiciona en la parte derecha */
+    font-size: 13px;
+    font-weight: bold;
+    color: #5441D8; /* Color de la calificación */
+    background-color: white; /* Fondo suave para la calificación */
+    padding: 5px 15px;
+    border-radius: 1000px; /* Bordes redondeados */
+}
+
+.bottom-image {
+    position: absolute;
+    bottom: 10px; /* Ajusta la imagen a la parte inferior */
+    right: 10px; /* Ajusta la imagen a la parte derecha */
+    height: 40px; /* Define el tamaño de la imagen */
+    width: 40px;
+    border-radius: 50%; /* Bordes redondeados si lo deseas */
+}
+
+.course-rating {
+    font-size: 13px; /* Cambia el tamaño de la fuente del rating */
+    color: #FFD700; /* Opcional: Si quieres un color dorado para las estrellas */
+    font-weight: bold;
+}
+
+.top-badge {
+    position: absolute;
+    top: 5px;  /* Asegura que esté bien ajustado a la esquina superior derecha */
+    right: 10px;  /* Ajusta según sea necesario */
+    background-color: white;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 1000px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.course-card:last-child .top-badge {
+    display: block;
+}
+
+.course-card:nth-child(2) {
+    background-color: #FFE5B4; /* Color piel */
+}
+
+.course-card:nth-child(3) {
+    background-color: #E0BBE4; /* Morado ligero */
+}
+
+.course-card:nth-child(4) {
+    background-color: #98FF98; /* Verde menta */
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar, .profile-sidebar {
+        display: none;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .course-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .course-rating {
+        margin-top: 10px;
+    }
+}
